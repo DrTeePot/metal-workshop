@@ -3,7 +3,7 @@
 using namespace metal;
 
 float distance_away(float2 p1, float2 p2) {
-	return sqrt(pow(p2[0] - p1[0], 2) + pow(p2[1] - p1[1], 2));
+	return sqrt((p2[0] - p1[0]) * (p2[0] - p1[0]) + ((p2[1] - p1[1]) * (p2[1] - p1[1])));
 }
 
 float2 toClipFromWindow(float2 windowPosition, float2 windowSize) {

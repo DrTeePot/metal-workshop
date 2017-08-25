@@ -4,9 +4,6 @@
 
 using namespace metal;
 
-float distance_away(float2 p1, float2 p2);
-float2 toClipFromWindow(float2 windowPosition, float2 windowSize);
-
 vertex OutVertex pulsing_circle_vertex_main(constant InVertex *vertices [[buffer(0)]],
 										  constant PulsingCircleUniform *uniforms [[buffer(1)]],
 										  ushort vid [[vertex_id]],
